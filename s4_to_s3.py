@@ -19,7 +19,7 @@ def get_d2(a, b, c, d, t):
 
 
 def adds_to_one(a, b, c, d, t):
-    print(round(a ** 2 + b ** 2 + c ** 2 + d ** 2 + t ** 2))
+    print(f"The coordinates on the 4-sphere squared sum to {a ** 2 + b ** 2 + c ** 2 + d ** 2 + t ** 2}.")
     return round(a ** 2 + b ** 2 + c ** 2 + d ** 2 + t ** 2) == 1
 
 
@@ -78,10 +78,11 @@ def main():
         d2 = get_d2(a, b, c, d, t)
         point = f"({round(a2, 5)},{round(b2, 5)},{round(c2, 5)},{round(d2, 5)})"
         print(point)
-        print(summed_cords(a2, b2, c2, d2))
+        print(f"The coordinates on the 3-sphere squared sum to {summed_cords(a2, b2, c2, d2)}.")
     else:
         print("a^2 + b^2 + c^2 + d^2 + t^2 does not equal 1")
 
 
 if __name__ == '__main__':
     main()
+    
