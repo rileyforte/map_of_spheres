@@ -104,6 +104,12 @@ def main():
         c2 = get_c2(a, b, c, d, t, s)
         d2 = get_d2(a, b, c, d, t, s)
         e2 = get_e2(a, b, c, d, t, s)
+        vector_magnitude = math.sqrt(summed_cords(a2, b2, c2, d2, e2))
+        a2 = a2 / vector_magnitude
+        b2 = b2 / vector_magnitude
+        c2 = c2 / vector_magnitude
+        d2 = d2 / vector_magnitude
+        e2 = e2 / vector_magnitude
         point_1 = f"({round(a, 5)}, {round(b, 5)}, {round(c, 5)}, {round(d, 5)}, {round(t, 5)}, {round(s, 5)})"
         point_2 = f"({round(a2, 5)}, {round(b2, 5)}, {round(c2, 5)}, {round(d2, 5)}, {round(e2, 5)})"
         print(f"The point {point_1} maps to {point_2}.")
@@ -112,6 +118,11 @@ def main():
         b3 = get_b3(a2, b2, c2, d2, e2)
         c3 = get_c3(a2, b2, c2, d2, e2)
         d3 = get_d3(a2, b2, c2, d2, e2)
+        vector_magnitude2 = math.sqrt(sum_cords(a3, b3, c3, d3))
+        a3 = a3 / vector_magnitude2
+        b3 = b3 / vector_magnitude2
+        c3 = c3 / vector_magnitude2
+        d3 = d3 / vector_magnitude2
         point_3 = f"({round(a3, 5)}, {round(b3, 5)}, {round(c3, 5)}, {round(d3, 5)})"
         print(f"The point {point_2} maps to {point_3}.")
         print(f"The coordinates on the 3-sphere squared sum to {sum_cords(a3, b3, c3, d3)}.")
