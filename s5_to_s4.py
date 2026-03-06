@@ -85,6 +85,12 @@ def main():
         c2 = get_c2(a, b, c, d, t, s)
         d2 = get_d2(a, b, c, d, t, s)
         e2 = get_e2(a, b, c, d, t, s)
+        vector_magnitude = math.sqrt(summed_cords(a2, b2, c2, d2, e2))
+        a2 = get_a2(a, b, c, d, t, s) / vector_magnitude
+        b2 = get_b2(a, b, c, d, t, s) / vector_magnitude
+        c2 = get_c2(a, b, c, d, t, s) / vector_magnitude
+        d2 = get_d2(a, b, c, d, t, s) / vector_magnitude
+        e2 = get_e2(a, b, c, d, t, s) / vector_magnitude
         point_1 = f"({round(a, 5)}, {round(b, 5)}, {round(c, 5)}, {round(d, 5)}, {round(t, 5)}, {round(s, 5)})"
         point_2 = f"({round(a2, 5)}, {round(b2, 5)}, {round(c2, 5)}, {round(d2, 5)}, {round(e2, 5)})"
         print(f"The point {point_1} maps to {point_2}.")
